@@ -1,0 +1,124 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h1 class="h2">Inspection Report</h1>
+</div>
+<form [formGroup]="rForm" (ngSubmit)="submit()">
+    <mat-tab-group>
+        <mat-tab label="First">
+            <div>
+                <div class="input">
+                    <label>Inspector</label>
+                    <select formControlName="inspector">
+                        <option value="inspector1">Inspector 1</option>
+                        <option value="inspector2">Inspector 2</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label>Inspection Type</label>
+                    <select formControlName="type">
+                        <option value="type1">Type 1</option>
+                        <option value="type2">Type 2</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label>Inspection Date</label>
+                    <input type="date" formControlName="date" placeholder="01/01/2021">
+                </div>
+            </div>
+            <div>
+                <div class="input">
+                    <label>Report Name</label>
+                    <input type="text" formControlName="reportName" placeholder="e.g. The Falcone Building Inspection">
+                </div>
+                <div class="input">
+                    <label>Inspection Image/Cover image</label>
+                    <input type="file" formControlName="coverImage" placeholder="Choose inspecrion image">
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Inspection Address">
+            <div formGroupName="addrees" class="address-info">
+                <div>
+                    <div class="input">
+                        <label>Street Number</label>
+                        <input type="text" formControlName="streetNumber" placeholder="Street 1234">
+                    </div>
+                    <div class="input">
+                        <label>Street Fraction</label>
+                        <input type="text" formControlName="streetFraction" placeholder="Street 1234">
+                    </div>
+                    <div class="input">
+                        <label>Street Direction</label>
+                        <input type="text" formControlName="streetFraction" placeholder="Street 1234">
+                    </div>
+                </div>
+                <div>
+                    <div class="input">
+                        <label>Street Name</label>
+                        <input type="text" formControlName="streetName" placeholder="Street 1234">
+                    </div>
+                    <div class="input">
+                        <label>Street Type</label>
+                        <input type="text" formControlName="streetType" placeholder="Street 1234">
+                    </div>
+                    <div class="input">
+                        <label>Street Unit</label>
+                        <input type="text" formControlName="streetUnit" placeholder="Street 1234">
+                    </div>
+                </div>
+                <div>
+                    <div class="input">
+                        <label>Country</label>
+                        <select formControlName="country">
+                            <option value="country1">Country 1</option>
+                            <option value="country2">Country 2</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label>City</label>
+                        <select formControlName="city">
+                            <option value="city1">City 1</option>
+                            <option value="city2">City 2</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <label>State</label>
+                        <input type="text" formControlName="state" placeholder="State">
+                    </div>
+                </div>
+                <div>
+                    <div class="input">
+                        <label>Zip</label>
+                        <input type="text" formControlName="zip" placeholder="1234">
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Inspection Company">
+            <div formGroupName="inspectionCompany" class="address-info">
+                <div>
+                    <div class="input">
+                        <label>Name</label>
+                        <input type="text" formControlName="name" placeholder="Street 1234">
+                    </div>
+                    <div class="input">
+                        <label>Phone</label>
+                        <input type="text" formControlName="phone" placeholder="Street 1234">
+                    </div>
+                    <div class="input">
+                        <label>Logo</label>
+                        <input type="file" formControlName="logo" placeholder="Street 1234">
+                    </div>
+                </div>
+                <div>
+                    <div class="input">
+                        <label>Address</label>
+                        <input type="text" formControlName="address" placeholder="Street 1234">
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+      </mat-tab-group>
+    
+    <hr>
+        <button type="submit">Submit</button>
+</form>

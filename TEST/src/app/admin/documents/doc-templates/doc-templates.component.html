@@ -1,0 +1,30 @@
+<h2 class="h2">Templates</h2>
+<hr>
+<div class="container-fluid">
+    <div class="row">
+        <table class="table table-striped table-bordered table-sm"> 
+            <thead>
+                <tr class="table-info text-center">
+                    <th>Name</th>
+                    <th>Access</th>
+                    <th>Published</th>
+                    <th>Last Updated</th>
+                </tr>
+                <tr>
+                    <div class="my-1"></div>
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of data">
+                <tr>
+                   <td colspan="4"><h5>{{item.title}}</h5></td> 
+                </tr>
+                <tr class="fw-lighter" *ngFor="let i of item.templates">
+                    <td>{{i.name}}</td> 
+                    <td>{{i.access}}</td> 
+                    <td>{{i.status}}</td> 
+                    <td>{{i.lastUpdate | date:'yyyy-MM-dd hh:mm:ss'}}</td> 
+                 </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

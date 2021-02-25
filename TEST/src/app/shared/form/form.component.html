@@ -1,0 +1,29 @@
+<form [formGroup]="form">
+    <div *ngFor="let control of customForm.controls" [ngSwitch]="control.type" class="control-wrapper">
+      <div *ngSwitchCase="'input'">
+        <label>{{control.label}}</label>
+        <input type="text" [formControlName]="control.name" class="form-control">
+      </div>
+      <div *ngSwitchCase="'select'">
+        <label>{{control.label}}</label>
+        <select [formControlName]="control.name" class="form-control">
+          <option *ngFor="let option of control.options" [value]="option.value">{{option.option}}</option>
+        </select>
+      </div>
+    </div>
+    <div *ngFor="let form of customForm.formGroups" formGroupName="form.name">
+      <div *ngFor="let subControl of form.controls" [ngSwitch]="subControl.type">
+        <div *ngSwitchCase="'input'">
+          <label>{{subControl.label}}</label>
+          <input type="text" [formControlName]="subControl.name" class="form-control">
+        </div>
+        <div *ngSwitchCase="'select'">
+          <label>{{subControl.label}}</label>
+          <select [formControlName]="subControl.name" class="form-control">
+            <option *ngFor="let option of subControl.options" [value]="option.value">{{option.option}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </form>
+  

@@ -1,0 +1,91 @@
+<div class="my-2">
+  <div class="d-flex flex-row bd-highlight mb-3">
+    <a role='button'>
+      <fa-stack class="mx-2">
+          <fa-icon [icon]="['fas', 'circle']" stackItemSize="2x"></fa-icon>
+          <fa-icon [icon]="['fas', 'plus']" [inverse]="true" stackItemSize="1x"></fa-icon>
+      </fa-stack>
+  </a>
+  <form class="row row-cols-lg-auto g-3 align-items-center">
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormInputGroupUsername">Search keyword...</label>
+        <div class="input-group">
+          <div class="input-group-text"><fa-icon class="mx-2" [icon]="['fas', 'search']"></fa-icon></div>
+          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Search keyword...">
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+          <label class="form-check-label" for="inlineFormCheck">
+            Include deleted
+          </label>
+        </div>
+      </div>
+    
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+  </div>
+    
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Status</th>
+            <th scope="col">Last Login</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>mark@ss.com</td>
+            <td>743 2352 3525</td>
+            <td>Active</td>
+            <td>2018-04-21 13:33:00</td>
+            <td >
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'directions']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'eye']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'file-excel']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'trash']"></fa-icon></span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Jacob</td>
+            <td>jacob@ss.com</td>
+            <td>743 2352 3525</td>
+            <td>Active</td>
+            <td>2018-04-21 13:33:00</td>
+            <td >
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'directions']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'eye']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'file-excel']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'trash']"></fa-icon></span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td>Larry the bird</td>
+            <td>larry@ggg.com</td>
+            <td>743 2352 3525</td>
+            <td>Active</td>
+            <td>2018-04-21 13:33:00</td>
+            <td >
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'directions']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'eye']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'file-excel']"></fa-icon></span>
+                <span class="btn"><fa-icon class="text-primary" [icon]="['fas', 'trash']"></fa-icon></span>
+            </td>
+        </tr>
+    </tbody>
+</table> 

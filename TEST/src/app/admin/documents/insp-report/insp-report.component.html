@@ -1,0 +1,321 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h1 class="h2">Inspection Report</h1>
+</div>
+<form [formGroup]="rForm" (ngSubmit)="submit()">
+    <mat-horizontal-stepper labelPosition="bottom" #stepper>
+        <mat-step label="General">
+            <div class="container-fluid py-2">
+                <div class="row row-cols-1 row-cols-md-3 gy-2">
+                    <div class="col">
+                        <label for="input2" class="form-label">Inspection type</label>
+                        <select id="input2" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input3" class="form-label">Inspection date</label>
+                        <input id='input3' type="text" class="form-control" >
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Report Name</label>
+                        <input id="input4" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Address</label>
+                        <input id="input4" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Inspection Image / Cover Image</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Browse images..." aria-label="Cover image" aria-describedby="button-addon2">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Browse...</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="input2" class="form-label">Client</label>
+                        <select id="input2" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Phone</label>
+                        <input id="input4" type="number" class="form-control">
+                    </div>
+                </div>
+            </div>
+            
+        </mat-step>
+        <mat-step label="Inspection Company">
+            <div class="container-fluid py-2">
+                <div class="row row-cols-1 row-cols-md-3 gy-2">
+                    <div class="col">
+                        <label for="input2" class="form-label">Inspector</label>
+                        <select id="input2" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input3" class="form-label">Name</label>
+                        <input id='input3' type="text" class="form-control" >
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Inspector phone</label>
+                        <input id="input4" type="number" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Company phone</label>
+                        <input id="input4" type="number" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Logo</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Browse images..." aria-label="Cover image" aria-describedby="button-addon2">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Browse...</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Address</label>
+                        <input id="input4" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">URL</label>
+                        <input id="input4" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Website</label>
+                        <input id="input4" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+        <mat-step label="Property Information">
+            <div class="container-fluid py-2">
+                <div class="row row-cols-1 row-cols-md-2 gy-2">
+                    <div class="col">
+                        <label for="input2" class="form-label">Structure Type</label>
+                        <select id="input2" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input2" class="form-label">Occupancy Status</label>
+                        <select id="input2" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Square Feet</label>
+                        <input id="input4" type="number" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Year Built</label>
+                        <input id="input4" type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 gy-2 pt-4">
+                    <div class="col-md-12">
+                        <p class="h5">Agents</p>
+                        <hr>
+                    </div>
+                    <div class="col">
+                        <label for="input1" class="form-label">Buyer Agent</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input1" class="form-label">Seller Agent</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+        <mat-step label="Evaluation">
+            <div class="container-fluid py-2">
+                <div class="row row-cols-1 row-cols-md-3 gy-2">
+                    <div class="col">
+                        <label for="client" class="form-label">Method</label>
+                        <select id="client" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Determination</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Degree Severity</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Location</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Element</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input4" class="form-label">Image Upload</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Browse images..." aria-label="Cover image" aria-describedby="button-addon2">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Browse...</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 gy-2 pt-4">
+                    <div class="col-md-12">
+                        <p class="h5">Condition</p>
+                        <hr>
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Temperature</label>
+                        <input id="phone" type="number" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Weather Conditions</label>
+                        <input id="phone" type="number" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input1" class="form-label">Seller Agent</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Listing Agent's Presence</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Selling Agent's Presence</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+        <!-- <mat-step label="Agents">
+            <div class="container-fluid py-2">
+                <div class="row row-cols-1 row-cols-md-2 gy-2">
+                    <div class="col">
+                        <label for="input1" class="form-label">Selling Agent</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="phone" class="form-label">Selling Agent's Presence</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="input1" class="form-label">Listing Agent</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="agpresence" class="form-label">Listing Agent's Presence</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+        <mat-step label="Info">
+            <div class="container-fluid py-2">
+                <div class="row row-cols-1 row-cols-md-2 gy-2">
+                    <div class="col">
+                        <label for="agpresence" class="form-label">Structure Type</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="agpresence" class="form-label">Occupancy Status</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="agpresence" class="form-label">Approx. Sq. Ft.</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="agpresence" class="form-label">Approx. Year Built</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label for="agpresence" class="form-label">Approx. Temp</label>
+                        <input id="phone" type="text" class="form-control">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="agpresence" class="form-label">Weather Conditions</label>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Comments</label>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 gy-2 py-2">
+                    <div class="col">
+                        <label for="input1" class="form-label">Method</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input1" class="form-label">Determination</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="input1" class="form-label">Degree/Severity</label>
+                        <select id="input1" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </mat-step>
+        <mat-step label="Element Information">
+            <div class="row row-cols-1 row-cols-md-3 gy-2 py-2">
+                <div class="col">
+                    <label for="input1" class="form-label">Location</label>
+                    <select id="input1" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="input1" class="form-label">Element</label>
+                    <select id="input1" class="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="logo" class="form-label">Image(s)</label>
+                    <div class="input-group">
+                        <input id="logo" type="text" class="form-control" placeholder="Browse images..." aria-label="Cover image" aria-describedby="button-addon2">
+                        <button class="btn btn-secondary" type="button" id="button-addon2">Browse...</button>
+                    </div>
+                </div>
+            </div>
+        </mat-step> -->
+    </mat-horizontal-stepper>
+    
+    <hr>
+        <button class="btn btn-info" type="submit">Submit</button>
+</form>

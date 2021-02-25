@@ -1,0 +1,19 @@
+
+.img-cover {
+    z-index: -1;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0; 
+    height: 32rem;
+    min-width: 100%;
+}
+
+.img-feature {
+    object-fit: cover;
+}
+
+.caption {
+    z-index: 1000;
+    text-shadow: 1px 1px 1px #fff;
+}
